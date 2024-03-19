@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: #353535;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid blue; */
+  height: 100vh;
+  font-family: "Grandstander", sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  /* border: 1px solid red; */
+  margin: 0;
+  font-family: "Grandstander", sans-serif;
+  color: aliceblue;
+}
+
+.instrument-section {
+  display: flex;
+  height: 85vh;
+  /* border: 1px solid green; */
+}
+
+.marimba-instrument {
+  display: flex;
+  margin: 3% auto;
+}
+
+.k1 {
+  width: 60px;
+  height: 280px;
+  background-color: #51e5ff;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #1eb6d1;
+}
+
+.k2 {
+  width: 60px;
+  height: 260px;
+  background-color: #8d3cd9;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #63269c;
+}
+
+.k3 {
+  width: 60px;
+  height: 240px;
+  background-color: #ec368d;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #cc2675;
+}
+
+.k4 {
+  width: 60px;
+  height: 220px;
+  background-color: #ffa4a4;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #ff8a8a;
+}
+
+.k5 {
+  width: 60px;
+  height: 200px;
+  background-color: #94d675;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #7ebe5f;
+}
+
+.k6 {
+  width: 60px;
+  height: 180px;
+  background-color: #ff8c42;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #ec7224;
+}
+
+.k7 {
+  width: 60px;
+  height: 160px;
+  background-color: #fb3939;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #ed0303;
+}
+
+.k8 {
+  width: 60px;
+  height: 140px;
+  background-color: #51e5ff;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #1eb6d1;
+}
+
+.k9 {
+  width: 60px;
+  height: 120px;
+  background-color: #8d3cd9;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #63269c;
+}
+
+.k10 {
+  width: 60px;
+  height: 100px;
+  background-color: #ec368d;
+  border-radius: 10px;
+  box-shadow: inset 15px 0px 0px #cc2675;
+}
