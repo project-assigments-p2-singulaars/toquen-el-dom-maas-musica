@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  background-color: #353535;
+  background-color: #8d9ef8;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* border: 1px solid blue; */
-  height: 100vh;
+  height: calc(100vh - 2%);
   font-family: "Grandstander", sans-serif;
 }
 
 h1 {
   display: flex;
+  font-size: 5vw;
   justify-content: center;
   align-items: center;
   height: 15vh;
@@ -23,7 +24,7 @@ h1 {
 
 .instrument-section {
   display: flex;
-  height: 85vh;
+  height: 85%;
   /* border: 1px solid green; */
 }
 
@@ -33,7 +34,6 @@ h1 {
 }
 
 .key {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +45,7 @@ h1 {
 .top-screw {
   width: 1.6rem;
   height: 1.6rem;
-  background-color: rgb(245, 245, 116);
+  background-color: #ffd796;
   border-radius: 50%;
   margin-top: 0.5rem;
 }
@@ -53,19 +53,10 @@ h1 {
 .bottom-screw {
   width: 1.6rem;
   height: 1.6rem;
-  background-color: rgb(245, 245, 116);
+  background-color: #ffd796;
   border-radius: 50%;
   margin-bottom: 0.5rem;
 }
-/* 
-#k1 .top-screw {
-  /* margin: 1rem auto 1rem 1rem; */
-/* } */
-
-/* #k1 .bottom-screw { */
-/* margin: 1rem auto 0px 1rem;
-  margin: auto auto 20px auto; */
-/* } */
 
 #k1 {
   height: 17.5rem;
@@ -142,3 +133,87 @@ h1 {
 .key.clicked {
   animation: keyClick 0.2s ease-in-out;
 } */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: #8d9ef8;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    /* height: 100vh; */
+  }
+  h1 {
+    margin: 4rem auto;
+    height: 10vh;
+  }
+
+  .instrument-section {
+    height: 90%;
+  }
+
+  #marimba-instrument {
+    margin: 0 auto;
+  }
+
+  .key {
+    cursor: pointer;
+    width: 6vw;
+    border-radius: 0.8rem;
+  }
+
+  .top-screw {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #ffd796;
+    border-radius: 50%;
+    margin-top: 0.6rem;
+  }
+
+  .bottom-screw {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+  }
+
+  #k1 {
+    height: 60vh;
+  }
+
+  #k2 {
+    height: 55vh;
+  }
+
+  #k3 {
+    height: 50vh;
+  }
+
+  #k4 {
+    height: 45vh;
+  }
+
+  #k5 {
+    height: 40vh;
+  }
+
+  #k6 {
+    height: 35vh;
+  }
+
+  #k7 {
+    height: 30vh;
+  }
+
+  #k8 {
+    height: 25vh;
+  }
+
+  #k9 {
+    height: 20vh;
+  }
+
+  #k10 {
+    height: 15vh;
+  }
+}
