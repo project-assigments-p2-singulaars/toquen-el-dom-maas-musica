@@ -1,14 +1,54 @@
 const notesAudioIdArray = [
-  { noteName: "noteC", audioRoute: "./assets/sounds/C.mp3" },
-  { noteName: "noteD", audioRoute: "./assets/sounds/D.mp3" },
-  { noteName: "noteE", audioRoute: "./assets/sounds/E.mp3" },
-  { noteName: "noteF", audioRoute: "./assets/sounds/F.mp3" },
-  { noteName: "noteG", audioRoute: "./assets/sounds/G.mp3" },
-  { noteName: "noteA", audioRoute: "./assets/sounds/A.mp3" },
-  { noteName: "noteB", audioRoute: "./assets/sounds/B.mp3" },
-  { noteName: "noteC1", audioRoute: "./assets/sounds/C1.mp3" },
-  { noteName: "noteD1", audioRoute: "./assets/sounds/D1.mp3" },
-  { noteName: "noteE1", audioRoute: "./assets/sounds/E1.mp3" },
+  {
+    keyEventHandler: "q",
+    noteName: "noteC",
+    audioRoute: "./assets/sounds/C.mp3",
+  },
+  {
+    keyEventHandler: "w",
+    noteName: "noteD",
+    audioRoute: "./assets/sounds/D.mp3",
+  },
+  {
+    keyEventHandler: "e",
+    noteName: "noteE",
+    audioRoute: "./assets/sounds/E.mp3",
+  },
+  {
+    keyEventHandler: "r",
+    noteName: "noteF",
+    audioRoute: "./assets/sounds/F.mp3",
+  },
+  {
+    keyEventHandler: "t",
+    noteName: "noteG",
+    audioRoute: "./assets/sounds/G.mp3",
+  },
+  {
+    keyEventHandler: "y",
+    noteName: "noteA",
+    audioRoute: "./assets/sounds/A.mp3",
+  },
+  {
+    keyEventHandler: "u",
+    noteName: "noteB",
+    audioRoute: "./assets/sounds/B.mp3",
+  },
+  {
+    keyEventHandler: "i",
+    noteName: "noteC1",
+    audioRoute: "./assets/sounds/C1.mp3",
+  },
+  {
+    keyEventHandler: "o",
+    noteName: "noteD1",
+    audioRoute: "./assets/sounds/D1.mp3",
+  },
+  {
+    keyEventHandler: "p",
+    noteName: "noteE1",
+    audioRoute: "./assets/sounds/E1.mp3",
+  },
 ];
 
 function playNote(index) {
@@ -23,6 +63,14 @@ function createEventListeners(id, index) {
 
   key.addEventListener("click", () => {
     playNote(index);
+  });
+
+  createKeyEventListeners(index)
+}
+
+function createKeyEventListeners(index) {
+  document.addEventListener("keydown", (e) => {
+    if (e.key === notesAudioIdArray[index].keyEventHandler) playNote(index);
   });
 }
 
