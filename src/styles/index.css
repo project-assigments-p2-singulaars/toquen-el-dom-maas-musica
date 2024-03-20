@@ -27,92 +27,103 @@ h1 {
   /* border: 1px solid green; */
 }
 
-.marimba-instrument {
+#marimba-instrument {
   display: flex;
   margin: 3% auto;
 }
 
 .key {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 4rem;
+  border-radius: 0.8rem;
 }
 
-.k1 {
-  width: 60px;
-  height: 280px;
+.top-screw {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: rgb(245, 245, 116);
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.bottom-screw {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: rgb(245, 245, 116);
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+/* 
+#k1 .top-screw {
+  /* margin: 1rem auto 1rem 1rem; */
+/* } */
+
+/* #k1 .bottom-screw { */
+/* margin: 1rem auto 0px 1rem;
+  margin: auto auto 20px auto; */
+/* } */
+
+#k1 {
+  height: 17.5rem;
   background-color: #51e5ff;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #1eb6d1;
 }
 
-.k2 {
-  width: 60px;
-  height: 260px;
+#k2 {
+  height: 16.25rem;
   background-color: #8d3cd9;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #63269c;
 }
 
-.k3 {
-  width: 60px;
-  height: 240px;
+#k3 {
+  height: 15rem;
   background-color: #ec368d;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #cc2675;
 }
 
-.k4 {
-  width: 60px;
-  height: 220px;
+#k4 {
+  height: 13.75rem;
   background-color: #ffa4a4;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #ff8a8a;
 }
 
-.k5 {
-  width: 60px;
-  height: 200px;
+#k5 {
+  height: 12.5rem;
   background-color: #94d675;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #7ebe5f;
 }
 
-.k6 {
-  width: 60px;
-  height: 180px;
+#k6 {
+  height: 11.25rem;
   background-color: #ff8c42;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #ec7224;
 }
 
-.k7 {
-  width: 60px;
-  height: 160px;
+#k7 {
+  height: 10rem;
   background-color: #fb3939;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #ed0303;
 }
 
-.k8 {
-  width: 60px;
-  height: 140px;
+#k8 {
+  height: 8.75rem;
   background-color: #51e5ff;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #1eb6d1;
 }
 
-.k9 {
-  width: 60px;
-  height: 120px;
+#k9 {
+  height: 7.5rem;
   background-color: #8d3cd9;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #63269c;
 }
 
-.k10 {
-  width: 60px;
-  height: 100px;
+#k10 {
+  height: 6.25rem;
   background-color: #ec368d;
-  border-radius: 10px;
   box-shadow: inset 15px 0px 0px #cc2675;
 }
 

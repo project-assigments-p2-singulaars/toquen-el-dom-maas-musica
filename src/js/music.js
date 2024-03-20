@@ -48,8 +48,8 @@ function generateAudioElements() {
   const marimbaSection = document.getElementById("marimba-instrument");
 
   notesAudioIdArray.map((note, index) => {
-    console.log(`note: ${note.noteName}`);
-    console.log(`route: ${note.audioRoute}`);
+    // console.log(`note: ${note.noteName}`);
+    // console.log(`route: ${note.audioRoute}`);
 
     let marimbaKey = createKey(index);
     let audioKey = createAudioKey(note);
