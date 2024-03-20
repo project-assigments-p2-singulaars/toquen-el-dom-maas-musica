@@ -89,6 +89,15 @@ function createKey(index) {
   generatedMarimbaKey.classList.add("key");
   generatedMarimbaKey.id = `k${index + 1}`;
 
+  let generatedTopScrew = document.createElement("div");
+  let generatedBottomScrew = document.createElement("div");
+
+  generatedTopScrew.classList.add("top-screw");
+  generatedBottomScrew.classList.add("bottom-screw");
+
+  generatedMarimbaKey.appendChild(generatedTopScrew);
+  generatedMarimbaKey.appendChild(generatedBottomScrew);
+
   return generatedMarimbaKey;
 }
 
