@@ -1,13 +1,14 @@
-// function playNote(element) {
-//   // Reproduce el sonido asociado a la tecla
-//   var audio = document.getElementById("noteSound");
-//   audio.play();
+function generateFooter() {
+    const fatherElement = document.body;
+    console.log(fatherElement);
 
-//   // Agrega la clase 'clicked' para activar la animación
-//   element.classList.add("clicked");
+    let footerArea = document.createElement("footer");
+    fatherElement.appendChild(footerArea);
+    
+    let informationElement = document.createElement("p");
+    informationElement.textContent = "@ Copyright 2024, Toquen el DOM - Factoria F5";
+    
+    footerArea.appendChild(informationElement);
+}
 
-//   // Remueve la clase 'clicked' después de un breve periodo de tiempo
-//   setTimeout(function () {
-//     element.classList.remove("clicked");
-//   }, 200); // Ajusta el tiempo de acuerdo a la duración de la animación
-// }
+generateFooter();
