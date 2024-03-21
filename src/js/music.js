@@ -51,6 +51,7 @@ const notesAudioIdArray = [
   },
 ];
 
+
 function playNote(index) {
   let noteAudio = document.getElementById(notesAudioIdArray[index].noteName);
   noteAudio.currentTime = 0;
@@ -58,6 +59,7 @@ function playNote(index) {
   noteAudio.play();
 }
 
+//#region Event Listeners Functions
 function createEventListeners(id, index) {
   let key = document.getElementById(id);
 
@@ -73,7 +75,9 @@ function createKeyEventListeners(index) {
     if (e.key === notesAudioIdArray[index].keyEventHandler) playNote(index);
   });
 }
+//#endregion
 
+//#region Creation of Elements Functions
 function createAudioKey(note) {
   let generatedAudioKey = document.createElement("audio");
 
@@ -91,23 +95,27 @@ function createKey(index) {
 
   let generatedTopScrew = document.createElement("div");
   let generatedBottomScrew = document.createElement("div");
+  let keyboardKey = document.createElement("p");
+
+  keyboardKey.textContent = notesAudioIdArray[index].keyEventHandler.toUpperCase();
 
   generatedTopScrew.classList.add("top-screw");
   generatedBottomScrew.classList.add("bottom-screw");
 
   generatedMarimbaKey.appendChild(generatedTopScrew);
   generatedMarimbaKey.appendChild(generatedBottomScrew);
+  
+  generatedTopScrew.appendChild(keyboardKey);
 
   return generatedMarimbaKey;
 }
+
+//#endregion
 
 function generateAudioElements() {
   const marimbaSection = document.getElementById("marimba-instrument");
 
   notesAudioIdArray.map((note, index) => {
-    // console.log(`note: ${note.noteName}`);
-    // console.log(`route: ${note.audioRoute}`);
-
     let marimbaKey = createKey(index);
     let audioKey = createAudioKey(note);
 
