@@ -65,7 +65,7 @@ function createEventListeners(id, index) {
     playNote(index);
   });
 
-  createKeyEventListeners(index)
+  createKeyEventListeners(index);
 }
 
 function createKeyEventListeners(index) {
