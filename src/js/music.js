@@ -60,19 +60,26 @@ function playNote(index) {
 }
 
 //#region Event Listeners Functions
-function createEventListeners(id, index) {
-  let key = document.getElementById(id);
+function createEventListeners(instrument, index) {
+  let key = document.getElementById(instrument.id);
 
   key.addEventListener("click", () => {
     playNote(index);
   });
 
-  createKeyEventListeners(index);
+  createKeyEventListeners(instrument,index);
 }
 
-function createKeyEventListeners(index) {
+function createKeyEventListeners(key, index) {
   document.addEventListener("keydown", (e) => {
-    if (e.key === notesAudioIdArray[index].keyEventHandler) playNote(index);
+    if (e.key === notesAudioIdArray[index].keyEventHandler) {
+      playNote(index);
+      key.classList.add("trigger-animation");
+
+      setTimeout(() => {
+        key.classList.remove("trigger-animation");
+      }, 200);
+    } 
   });
 }
 //#endregion
@@ -122,7 +129,7 @@ function generateAudioElements() {
     marimbaSection.appendChild(marimbaKey);
     marimbaSection.appendChild(audioKey);
 
-    createEventListeners(marimbaKey.id, index);
+    createEventListeners(marimbaKey, index);
   });
 }
 
