@@ -331,8 +331,8 @@ section h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     gap: 3rem;
     /* background-image: url(../assets/img/Desktop\ -\ 1.svg); */
   }
