@@ -107,7 +107,12 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 4rem;
+  cursor: pointer;
   border-radius: 0.8rem;
+}
+
+.key:hover {
+  cursor: url("../assets/img/paloGrande.png"), auto;
 }
 
 .top-screw {
@@ -184,6 +189,33 @@ body {
   height: 6.25rem;
   background-color: #ec368d;
   box-shadow: inset 15px 0px 0px #cc2675;
+}
+
+
+@keyframes keyAnimation {
+  0% {
+    transform: skewX(-15deg);
+  }
+  5% {
+    transform: skewX(15deg);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+.key.clicked,
+.key:active {
+  animation: keyAnimation 1.5s infinite;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -269,11 +301,13 @@ body {
   }
 
   .key {
-    cursor: pointer;
+    /* cursor: pointer; */
     width: 6vw;
     border-radius: 0.8rem;
   }
-
+  .key:hover {
+    cursor: url("../assets/img/paloGrande.png"), auto;
+  }
   .top-screw {
     width: 1.8rem;
     height: 1.8rem;
