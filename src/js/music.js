@@ -51,6 +51,11 @@ const notesAudioIdArray = [
   },
 ];
 
+const instruments = [
+  { instrument: "MARIMBA", instrumentImage: "./assets/img/Marimba.svg" },
+  { instrument: "BATERÍA", instrumentImage: "./assets/img/Drum.svg" },
+  { instrument: "PIANO", instrumentImage: "./assets/img/Piano.svg" },
+];
 
 function playNote(index) {
   let noteAudio = document.getElementById(notesAudioIdArray[index].noteName);
@@ -104,17 +109,58 @@ function createKey(index) {
   let generatedBottomScrew = document.createElement("div");
   let keyboardKey = document.createElement("p");
 
-  keyboardKey.textContent = notesAudioIdArray[index].keyEventHandler.toUpperCase();
+  keyboardKey.textContent =
+    notesAudioIdArray[index].keyEventHandler.toUpperCase();
 
   generatedTopScrew.classList.add("top-screw");
   generatedBottomScrew.classList.add("bottom-screw");
 
   generatedMarimbaKey.appendChild(generatedTopScrew);
   generatedMarimbaKey.appendChild(generatedBottomScrew);
-  
+
   generatedTopScrew.appendChild(keyboardKey);
 
   return generatedMarimbaKey;
+}
+
+function createInstrumentElement(givenInstrument) {
+  let instrumentElement = document.createElement("div");
+  instrumentElement.classList.add("instrument");
+
+  let imageContainer = document.createElement("div");
+  imageContainer.classList.add("img-container");
+
+  let instrumentImage = document.createElement("img");
+  instrumentImage.src = givenInstrument.instrumentImage;
+  instrumentImage.classList.add("instrument-image");
+
+  imageContainer.appendChild(instrumentImage);
+
+  let instrumentName = document.createElement("p");
+  instrumentName.textContent = givenInstrument.instrument;
+
+  instrumentElement.appendChild(imageContainer);
+  instrumentElement.appendChild(instrumentName);
+
+  return instrumentElement;
+}
+
+function generateInstrumentsSection() {
+  const fatherElement = document.getElementById("instruments-section");
+
+  let sectionTitle = document.createElement("h2");
+  sectionTitle.textContent = "INSTRUMENTOS";
+
+  let instrumentContainer = document.createElement("div");
+  instrumentContainer.id = "instrument-container";
+
+  fatherElement.appendChild(sectionTitle);
+
+  instruments.map((instrument) => {
+    let instrumentResult = createInstrumentElement(instrument);
+    instrumentContainer.appendChild(instrumentResult);
+  });
+  fatherElement.appendChild(instrumentContainer);
 }
 
 //#endregion
@@ -134,3 +180,4 @@ function generateAudioElements() {
 }
 
 generateAudioElements();
+generateInstrumentsSection();
