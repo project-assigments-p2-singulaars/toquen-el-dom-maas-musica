@@ -53,8 +53,8 @@ const notesAudioIdArray = [
 
 const instruments = [
   { instrument: "MARIMBA", instrumentImage: "./assets/img/Marimba.svg" },
-  { instrument: "BATERÍA", instrumentImage: "./assets/img/Drum.svg" },
   { instrument: "PIANO", instrumentImage: "./assets/img/Piano.svg" },
+  { instrument: "BATERÍA", instrumentImage: "./assets/img/Drum.svg" },
 ];
 
 function playNote(index) {
@@ -72,7 +72,7 @@ function createEventListeners(instrument, index) {
     playNote(index);
   });
 
-  createKeyEventListeners(instrument,index);
+  createKeyEventListeners(instrument, index);
 }
 
 function createKeyEventListeners(key, index) {
@@ -84,7 +84,7 @@ function createKeyEventListeners(key, index) {
       setTimeout(() => {
         key.classList.remove("trigger-animation");
       }, 200);
-    } 
+    }
   });
 }
 //#endregion
@@ -146,7 +146,7 @@ function createInstrumentElement(givenInstrument) {
 }
 
 function generateInstrumentsSection() {
-  const fatherElement = document.getElementById("instruments-section");
+  const fatherElement = document.getElementById("instrument-selection-section");
 
   let sectionTitle = document.createElement("h2");
   sectionTitle.textContent = "INSTRUMENTOS";
@@ -166,14 +166,23 @@ function generateInstrumentsSection() {
 //#endregion
 
 function generateAudioElements() {
-  const marimbaSection = document.getElementById("marimba-instrument");
+  const fatherElement = document.getElementById("marimba-section");
+
+  let marimbaContainer = document.createElement("div");
+  marimbaContainer.id = "marimba-instrument";
+
+  let sectionTitle = document.createElement("h2");
+  sectionTitle.textContent = instruments[0].instrument;
+
+  fatherElement.appendChild(sectionTitle);
+  fatherElement.appendChild(marimbaContainer);
 
   notesAudioIdArray.map((note, index) => {
     let marimbaKey = createKey(index);
     let audioKey = createAudioKey(note);
 
-    marimbaSection.appendChild(marimbaKey);
-    marimbaSection.appendChild(audioKey);
+    marimbaContainer.appendChild(marimbaKey);
+    marimbaContainer.appendChild(audioKey);
 
     createEventListeners(marimbaKey, index);
   });

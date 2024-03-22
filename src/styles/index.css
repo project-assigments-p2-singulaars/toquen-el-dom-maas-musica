@@ -191,7 +191,6 @@ body {
   box-shadow: inset 15px 0px 0px #cc2675;
 }
 
-
 @keyframes keyAnimation {
   0% {
     transform: skewX(-15deg);
@@ -213,10 +212,59 @@ body {
   }
 }
 
+.trigger-animation {
+  animation: keyAnimation 0.25s infinite;
+}
+
 .key.clicked,
 .key:active {
   animation: keyAnimation 1.5s infinite;
 }
+
+/*#region Instruments Section */
+#instrument-selection-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
+
+section h2 {
+  font-family: "Paytone One", sans-serif;
+  font-size: 3rem;
+  color: #ffee91;
+}
+
+#instrument-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.instrument {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #93ace1;
+  height: 10rem;
+  width: 10rem;
+  border: solid #ffee91 0.5rem;
+  border-radius: 50%;
+}
+.instrument p {
+  font-size: 1.5rem;
+}
+.instrument-image {
+  height: 5rem;
+  width: 5rem;
+}
+/*#endregion */
 
 @media only screen and (min-width: 1024px) {
   body {
@@ -309,11 +357,20 @@ body {
     cursor: url("../assets/img/paloGrande.png"), auto;
   }
   .top-screw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1.8rem;
     height: 1.8rem;
     background-color: #ffd796;
     border-radius: 50%;
     margin-top: 0.6rem;
+  }
+
+  .top-screw p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 
   .bottom-screw {
@@ -361,5 +418,66 @@ body {
 
   #k10 {
     height: 15vh;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    border: solid #ffee91 1.5rem;
+  }
+  .instrument p {
+    font-size: 2.25rem;
+  }
+  #instruments-section h2 {
+    font-size: 4rem;
+  }
+  #instrument-container {
+    width: 80%;
+  }
+  .instrument-image {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .instrument p {
+    color: white;
+    font-family: "Paytone One", sans-serif;
+  }
+
+  section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #marimba-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section h2 {
+    font-size: 3.5rem;
+    -webkit-text-stroke: 0.1rem black;
+  }
+
+  .top-screw p {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002a52;
+    height: 15vh;
+  }
+
+  footer {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    color: white;
   }
 }
