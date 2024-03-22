@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
   /* height: calc(100vh - 2%); */
 }
 
@@ -64,10 +65,16 @@ body {
 }
 
 .header-content h1 {
+  display: flex;
+  font-size: 5vw;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 4rem;
+  font-weight: 400;
+  font-style: normal;
   color: #ffee91;
-  -webkit-text-stroke: 0.2rem black;
 }
 
 .header-content p {
@@ -225,6 +232,7 @@ body {
 #instrument-selection-section {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   height: 100vh;
   width: 100vw;
   align-items: center;
@@ -310,6 +318,14 @@ section h2 {
     color: #fdfeff;
   }
 
+  .section-title {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   #home-section {
     display: flex;
     flex-direction: column;
@@ -325,19 +341,19 @@ section h2 {
     width: 50%;
   }
 
-  h1 {
+  .header-content h1 {
     display: flex;
-    font-size: 5vw;
+    font-size: 3.5vw;
     justify-content: center;
     align-items: center;
-    height: 15vh;
-    /* border: 1px solid red; */
+    height: 18vh;
     margin: 0;
     font-family: "Paytone One", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #ffee91;
-    border: 1 px solid red;
+    -webkit-text-stroke: 0.2rem black;
+    text-stroke: 0.2rem black;
   }
 
   .instrument-section {
@@ -456,6 +472,7 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   section h2 {
