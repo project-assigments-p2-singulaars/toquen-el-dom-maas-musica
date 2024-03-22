@@ -123,6 +123,26 @@ function createKey(index) {
   return generatedMarimbaKey;
 }
 
+function createTitleSection(title) {
+  let titleContainer = document.createElement("div");
+  titleContainer.classList.add("section-title");
+
+  let leftImageEffect = document.createElement("img");
+  leftImageEffect.src = "./assets/img/LeftLightEffect.svg";
+
+  let titleElement = document.createElement("h2");
+  titleElement.textContent = title;
+
+  let rightImageEffect = document.createElement("img");
+  rightImageEffect.src = "./assets/img/RightLightEffect.svg";
+
+  titleContainer.appendChild(leftImageEffect);
+  titleContainer.appendChild(titleElement);
+  titleContainer.appendChild(rightImageEffect);
+
+  return titleContainer;
+}
+
 function createInstrumentElement(givenInstrument) {
   let instrumentElement = document.createElement("div");
   instrumentElement.classList.add("instrument");
@@ -148,8 +168,10 @@ function createInstrumentElement(givenInstrument) {
 function generateInstrumentsSection() {
   const fatherElement = document.getElementById("instrument-selection-section");
 
-  let sectionTitle = document.createElement("h2");
-  sectionTitle.textContent = "INSTRUMENTOS";
+  const sectionTitle = createTitleSection("INSTRUMENTOS");
+
+  // let sectionTitle = document.createElement("h2");
+  // sectionTitle.textContent = "INSTRUMENTOS";
 
   let instrumentContainer = document.createElement("div");
   instrumentContainer.id = "instrument-container";
@@ -171,8 +193,10 @@ function generateAudioElements() {
   let marimbaContainer = document.createElement("div");
   marimbaContainer.id = "marimba-instrument";
 
-  let sectionTitle = document.createElement("h2");
-  sectionTitle.textContent = instruments[0].instrument;
+  const sectionTitle = createTitleSection("MARIMBA");
+
+  // let sectionTitle = document.createElement("h2");
+  // sectionTitle.textContent = instruments[0].instrument;
 
   fatherElement.appendChild(sectionTitle);
   fatherElement.appendChild(marimbaContainer);
