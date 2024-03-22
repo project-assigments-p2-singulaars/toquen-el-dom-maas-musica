@@ -58,3 +58,40 @@ Desarrolla una web para la escuela de música "Toquen el DOM", en la que los usu
 - [Link inspiración 1](https://www.sessiontown.com/es)
 - [Link inspiración 2](https://www.virtualmusicalinstruments.com/pan-flute)
 - [Link inspiración 3](https://www.musicca.com/es/herramientas)
+
+
+## Entrega
+
+### Enlace Backlog
+
+https://trello.com/b/ykwlqR3S/proyecto-toquen-el-dom
+
+### Descripción del producto
+
+La web permite al usuario aprender a tocar instrumentos mediante la interacción con instrumentos virtuales. Por el momento únicamente con la marimba.
+
+### Demo (FIGMA)
+
+https://www.figma.com/file/unmg89BufYwFWX08KQKzD6/MAAS-Music?type=design&node-id=130-5&mode=design&t=L26Hn3XSdsULs4ra-0
+
+### Herramientas utilizadas
+
+- HTML
+- CSS
+- JavaScript
+
+- Github
+
+- Trello
+- Figma
+- Adobe Illustrator
+
+### Como instalar el proyecto en local
+
+- Paso 1: Obtener el link del repositorio (https://github.com/project-assigments-p2-singulaars/toquen-el-dom-maas-musica.git)
+
+- Paso 2: Abrir una terminal con la carpeta en la que queremos clonar el archivo
+
+- Paso 3: Usar el comando git clone https://github.com/project-assigments-p2-singulaars/toquen-el-dom-maas-musica.git
+
+- Paso 4: Abrir VisualStudio Code para empezar a trabajar
