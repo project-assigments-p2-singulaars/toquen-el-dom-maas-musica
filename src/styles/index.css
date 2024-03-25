@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Paytone+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  background-color: #00376a;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* height: calc(100vh - 2%); */
+}
+
+#home-section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/img/header-boy1.png"),
+    url("../assets/img/header-girl1.png");
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
+  background-size: 30%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: #00416a;
+  position: fixed;
+  top: 0;
+  padding: 0.5rem 0;
+  z-index: 5;
+}
+
+.nav-bar ul {
+  display: flex;
+  width: 30%;
+  list-style-type: none;
+  text-align: right;
+  margin-right: 2%;
+  /* border: 1px solid red; */
+}
+
+.nav-bar ul li {
+  padding: 5%;
+}
+
+.nav-bar ul li:hover {
+  color: black;
+  background-color: #1b74ab;
+}
+
+.nav-bar ul a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  /* border: 1px solid green; */
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header-content h1 {
+  display: flex;
+  font-size: 5vw;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffee91;
+}
+
+.header-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  text-align: start;
+  line-height: 2;
+  color: #ffff;
+  margin: 0 25%;
+}
+
+.header-content button {
+  margin: 6%;
+  background-color: #ffee91;
+  color: solid black;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 3rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+.header-content button:hover {
+  background-color: #e1ca44;
+}
+
+#marimba-instrument {
+  display: flex;
+  margin: 3% auto;
+  /* border: 1px solid red; */
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 4rem;
+  cursor: pointer;
+  border-radius: 0.8rem;
+}
+
+.key:hover {
+  cursor: url("../assets/img/paloGrande.png"), auto;
+}
+
+.top-screw {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #ffd796;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.bottom-screw {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #ffd796;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+#k1 {
+  height: 17.5rem;
+  background-color: #51e5ff;
+  box-shadow: inset 15px 0px 0px #1eb6d1;
+}
+
+#k2 {
+  height: 16.25rem;
+  background-color: #8d3cd9;
+  box-shadow: inset 15px 0px 0px #63269c;
+}
+
+#k3 {
+  height: 15rem;
+  background-color: #ec368d;
+  box-shadow: inset 15px 0px 0px #cc2675;
+}
+
+#k4 {
+  height: 13.75rem;
+  background-color: #ffa4a4;
+  box-shadow: inset 15px 0px 0px #ff8a8a;
+}
+
+#k5 {
+  height: 12.5rem;
+  background-color: #94d675;
+  box-shadow: inset 15px 0px 0px #7ebe5f;
+}
+
+#k6 {
+  height: 11.25rem;
+  background-color: #ff8c42;
+  box-shadow: inset 15px 0px 0px #ec7224;
+}
+
+#k7 {
+  height: 10rem;
+  background-color: #fb3939;
+  box-shadow: inset 15px 0px 0px #ed0303;
+}
+
+#k8 {
+  height: 8.75rem;
+  background-color: #51e5ff;
+  box-shadow: inset 15px 0px 0px #1eb6d1;
+}
+
+#k9 {
+  height: 7.5rem;
+  background-color: #8d3cd9;
+  box-shadow: inset 15px 0px 0px #63269c;
+}
+
+#k10 {
+  height: 6.25rem;
+  background-color: #ec368d;
+  box-shadow: inset 15px 0px 0px #cc2675;
+}
+
+@keyframes keyAnimation {
+  0% {
+    transform: skewX(-15deg);
+  }
+  5% {
+    transform: skewX(15deg);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+.trigger-animation {
+  animation: keyAnimation 0.25s infinite;
+}
+
+.key.clicked,
+.key:active {
+  animation: keyAnimation 1.5s infinite;
+}
+
+/*#region Instruments Section */
+#instrument-selection-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
+
+section h2 {
+  font-family: "Paytone One", sans-serif;
+  font-size: 3rem;
+  color: #ffee91;
+}
+
+#instrument-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.instrument {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #93ace1;
+  height: 10rem;
+  width: 10rem;
+  border: solid #ffee91 0.5rem;
+  border-radius: 50%;
+}
+.instrument p {
+  font-size: 1.5rem;
+}
+.instrument-image {
+  height: 5rem;
+  width: 5rem;
+}
+/*#endregion */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: #00416a;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    /* height: 100vh; */
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43%;
+    height: 50px;
+    border: 1 px solid red;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1 px solid red;
+  }
+
+  nav ul li a {
+    font-size: 3.45vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    border: 1 px solid red;
+    text-decoration: none;
+    color: #fdfeff;
+  }
+
+  .section-title {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 3rem;
+    /* background-image: url(../assets/img/Desktop\ -\ 1.svg); */
+  }
+
+  #home-section p {
+    width: 50%;
+  }
+
+  .header-content h1 {
+    display: flex;
+    font-size: 3.5vw;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+    margin: 0;
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffee91;
+    -webkit-text-stroke: 0.2rem black;
+    text-stroke: 0.2rem black;
+  }
+
+  .instrument-section {
+    height: 90%;
+  }
+
+  #marimba-instrument {
+    margin: 0 auto;
+  }
+
+  .key {
+    /* cursor: pointer; */
+    width: 6vw;
+    border-radius: 0.8rem;
+  }
+  .key:hover {
+    cursor: url("../assets/img/paloGrande.png"), auto;
+  }
+  .top-screw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #ffd796;
+    border-radius: 50%;
+    margin-top: 0.6rem;
+  }
+
+  .top-screw p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .bottom-screw {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+  }
+
+  #k1 {
+    height: 60vh;
+  }
+
+  #k2 {
+    height: 55vh;
+  }
+
+  #k3 {
+    height: 50vh;
+  }
+
+  #k4 {
+    height: 45vh;
+  }
+
+  #k5 {
+    height: 40vh;
+  }
+
+  #k6 {
+    height: 35vh;
+  }
+
+  #k7 {
+    height: 30vh;
+  }
+
+  #k8 {
+    height: 25vh;
+  }
+
+  #k9 {
+    height: 20vh;
+  }
+
+  #k10 {
+    height: 15vh;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    border: solid #ffee91 1.5rem;
+  }
+  .instrument p {
+    font-size: 2.25rem;
+  }
+  #instruments-section h2 {
+    font-size: 4rem;
+  }
+  #instrument-container {
+    width: 80%;
+  }
+  .instrument-image {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .instrument p {
+    color: white;
+    font-family: "Paytone One", sans-serif;
+  }
+
+  section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #marimba-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  section h2 {
+    font-size: 3.5rem;
+    -webkit-text-stroke: 0.1rem black;
+  }
+
+  .top-screw p {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002a52;
+    height: 15vh;
+  }
+
+  footer {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    color: white;
+  }
+}
